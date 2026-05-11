@@ -1,6 +1,6 @@
 # DSL Code Reviewer — AI-Powered Code Review Agent for Domain-Specific Languages
 
-An agentic code review system using **Claude (Anthropic)**, **LangGraph**, and **FastAPI** that performs multi-stage analysis of domain-specific language (DSL) code including Verilog, SystemVerilog, SQL, CUDA, VHDL, and Assembly.
+An agentic code review system using **Groq**, **LangGraph**, and **FastAPI** that performs multi-stage analysis of domain-specific language (DSL) code including Verilog, SystemVerilog, SQL, CUDA, VHDL, and Assembly.
 
 ---
 
@@ -151,7 +151,7 @@ dsl-code-reviewer/
 
 | Component | Technology |
 |---|---|
-| LLM | Claude Sonnet (`claude-sonnet-4-20250514`) via `langchain-anthropic` |
+| LLM | Groq (`llama-3.3-70b-versatile`) |
 | Agent Orchestration | LangGraph `StateGraph` |
 | API Framework | FastAPI + Uvicorn |
 | Containerization | Docker + Docker Compose |
