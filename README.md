@@ -1,4 +1,4 @@
-# DSL Code Reviewer — AI-Powered Code Review Agent for Domain-Specific Languages
+# DSL Code Reviewer: AI-Powered Code Review Agent for Domain-Specific Languages
 
 An agentic code review system using **Groq**, **LangGraph**, and **FastAPI** that performs multi-stage analysis of domain-specific language (DSL) code including Verilog, SystemVerilog, SQL, CUDA, VHDL and Assembly.
 
