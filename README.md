@@ -1,39 +1,6 @@
 # DSL Code Reviewer — AI-Powered Code Review Agent for Domain-Specific Languages
 
-An agentic code review system using **Claude (Anthropic)**, **LangGraph**, and **FastAPI** that performs multi-stage analysis of domain-specific language (DSL) code including Verilog, SystemVerilog, SQL, CUDA, VHDL, and Assembly.
-
----
-
-## Architecture
-
-```
-Code Input (inline or file)
-         │
-         ▼
-┌────────────────────────────────────────────────────┐
-│              LangGraph StateGraph                   │
-│                                                    │
-│  ┌─────────────────┐     ┌──────────────────────┐ │
-│  │  Syntax Agent   │────▶│  Adversarial Agent   │ │
-│  │                 │     │                      │ │
-│  │  Lint, style,   │     │  First-principles    │ │
-│  │  error checking │     │  questioning of      │ │
-│  └─────────────────┘     │  assumptions         │ │
-│                           └──────────┬───────────┘ │
-│  ┌─────────────────┐     ┌──────────▼───────────┐ │
-│  │ Remediation     │◀────│  Rubber Duck Agent   │ │
-│  │ Agent           │     │                      │ │
-│  │                 │     │  Plain-English        │ │
-│  │ Fixes + revised │     │  walkthrough of      │ │
-│  │ code + score    │     │  actual behavior     │ │
-│  └─────────────────┘     └──────────────────────┘ │
-└────────────────────────────────────────────────────┘
-         │
-         ▼
-  Structured Review Report
-  (syntax issues + adversarial questions +
-   explanation + fixes + revised code + quality score)
-```
+An agentic code review system using **Claude (Anthropic)**, **LangGraph**, and **FastAPI** that performs multi-stage analysis of domain-specific language (DSL) code including Verilog, SystemVerilog, SQL, CUDA, VHDL and Assembly.
 
 ---
 
@@ -204,7 +171,3 @@ dsl-code-reviewer/
 | `GET` | `/docs` | Swagger UI |
 
 ---
-
-## Resume Bullet
-
-> Built a multi-agent AI code review system for domain-specific languages (Verilog, SQL, CUDA) using LangGraph, Claude (Anthropic), and FastAPI; implemented 4 specialized agents — syntax checker, adversarial reviewer, rubber-duck explainer, and remediator — with MCP-inspired filesystem tooling, language-specific skills loading, and token-budget-aware rate limiting; containerized with Docker.
